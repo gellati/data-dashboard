@@ -1,0 +1,40 @@
+.bar-chart{
+    display:block;
+    height: 300px;
+    width: 600px;
+    position: relative;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin: 30px auto;
+}
+
+td {
+    position: absolute;
+    width: 20px;
+    bottom: 0;
+    display: block;
+
+}
+
+td span{
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    padding: 5px;
+    color: white;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    width: 300px;
+}
+
+td.legend{
+    bottom: -20px;
+    font-size: 0.8em;
+    width: 50px;
+    text-align: center;
+}
+
+td.bar{
+    background: tomato;
+    margin-left: 15px;
+}
