@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+  <head>
+    <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <script src="../angular.min.js"></script>
+  <script src="controllers.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div ng-app="app">
+    <div ng-controller="controller">
+      <table class="bar-chart">
+	<tr class="sr-only">
+	  <th>Month</th>
+	  <th>Sales</th>
+	</tr>
+
+	<tr ng-repeat="entry in data">
+	  
+	  <td ng-style="{left: $index * 50  +  'px'}"
+	      class="legend"}">{{entry.month | limitTo: 3}}</td>
+	  
+	  <td ng-style="{left: $index * 50 + 'px',
+	      height: (entry.sales / max) * 300 + 'px'}" class="bar">
+
+	    <span>{{entry.sales | currency: '$'}}</span>
+
+	  </td>
+
+	</tr>
+	
+
+
+      </table>
+
+    </div>
+  </div>
+
+</body>
+</html>
